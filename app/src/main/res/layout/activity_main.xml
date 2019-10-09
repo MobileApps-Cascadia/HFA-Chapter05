@@ -55,10 +55,11 @@
 
     <Spinner
         android:id="@+id/teaType"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="61dp"
+        android:layout_height="31dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
+        android:background="#E4E3E3"
         android:entries="@array/tea_types"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/headingText" />
