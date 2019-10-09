@@ -27,7 +27,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="4dp"
         android:clickable="true"
         android:text="Tea Me"
         android:textSize="48dp"
@@ -38,20 +38,20 @@
         android:id="@+id/sugarBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="16dp"
         android:text="Sugar"
         app:layout_constraintStart_toEndOf="@+id/lemonBox"
-        app:layout_constraintTop_toBottomOf="@+id/teaType" />
+        app:layout_constraintTop_toBottomOf="@+id/headingText" />
 
     <CheckBox
         android:id="@+id/lemonBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="16dp"
         android:text="lemon"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/teaType" />
+        app:layout_constraintStart_toEndOf="@+id/teaType"
+        app:layout_constraintTop_toBottomOf="@+id/headingText" />
 
     <Spinner
         android:id="@+id/teaType"
@@ -67,17 +67,17 @@
         android:id="@+id/milkBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="16dp"
         android:text="Milk"
         app:layout_constraintStart_toEndOf="@+id/sugarBox"
-        app:layout_constraintTop_toBottomOf="@+id/teaType" />
+        app:layout_constraintTop_toBottomOf="@+id/headingText" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
-        android:layout_marginTop="108dp"
+        android:layout_marginTop="15dp"
         android:text="Button"
         app:layout_constraintStart_toEndOf="@+id/headingText"
         app:layout_constraintTop_toTopOf="parent" />
