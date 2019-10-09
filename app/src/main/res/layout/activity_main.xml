@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -14,38 +15,67 @@
         android:layout_height="wrap_content"
         android:text="Tea Me"
         android:textSize="48dp"
-        />
+        app:layout_constraintBottom_toTopOf="@id/teaImage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/teaImage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/tea"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp" />
+        android:scaleType="centerCrop"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/headingText"
+        app:srcCompat="@drawable/tea" />
 
     <Spinner
         android:id="@+id/teaType"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_width="177dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="4dp"
+        android:entries="@array/tea_types"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.901"
+        app:layout_constraintStart_toEndOf="@+id/lemonBox"
+        app:layout_constraintTop_toTopOf="@+id/teaImage" />
 
     <CheckBox
         android:id="@+id/milkBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Milk" />
+        android:text="Milk"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sugarBox" />
 
     <CheckBox
         android:id="@+id/sugarBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Sugar" />
+        android:text="Sugar"
+        app:layout_constraintBottom_toTopOf="@+id/milkBox"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lemonBox" />
 
     <CheckBox
         android:id="@+id/lemonBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="lemon" />
+        android:text="lemon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/teaImage" />
+
+    <Button
+        android:id="@+id/button_submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Submit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.603"
+        app:layout_constraintStart_toEndOf="@+id/milkBox"
+        app:layout_constraintTop_toBottomOf="@+id/teaType" />
 
 
 </android.support.constraint.ConstraintLayout>
