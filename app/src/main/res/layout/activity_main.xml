@@ -8,44 +8,67 @@
 
     <!-- TODO : Add constraints to position the spinner and check boxes side by side,
                 over the top-left gray area of the image -->
+
+    <ImageView
+        android:id="@+id/teaImage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/tea" />
+
     <TextView
         android:id="@+id/headingText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="100dp"
         android:text="Tea Me"
         android:textSize="48dp"
-        />
-
-    <ImageView
-        android:id="@+id/teaImage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/tea"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp" />
-
-    <Spinner
-        android:id="@+id/teaType"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-
-    <CheckBox
-        android:id="@+id/milkBox"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Milk" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/teaImage" />
 
     <CheckBox
         android:id="@+id/sugarBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Sugar" />
+        android:layout_marginTop="20dp"
+        android:text="Sugar"
+        app:layout_constraintStart_toEndOf="@+id/lemonBox"
+        app:layout_constraintTop_toBottomOf="@+id/teaType" />
 
     <CheckBox
         android:id="@+id/lemonBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="lemon" />
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:text="lemon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/teaType" />
+
+    <Spinner
+        android:id="@+id/teaType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/headingText" />
+
+    <CheckBox
+        android:id="@+id/milkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Milk"
+        app:layout_constraintStart_toEndOf="@+id/sugarBox"
+        app:layout_constraintTop_toBottomOf="@+id/teaType" />
 
 
 </android.support.constraint.ConstraintLayout>
