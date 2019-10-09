@@ -10,4 +10,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
+
+    public void getTea(){
+
+        android.widget.Spinner spinner = (android.widget.Spinner) findViewById(R.id.teaType);
+    }
+
+
 }
