@@ -8,44 +8,97 @@
 
     <!-- TODO : Add constraints to position the spinner and check boxes side by side,
                 over the top-left gray area of the image -->
+
+    <ImageView
+        android:id="@+id/teaImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/image_of_tea_pouring_into_cup"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/tea"
+        tools:layout_editor_absoluteX="29dp"
+        tools:layout_editor_absoluteY="0dp" />
+
     <TextView
         android:id="@+id/headingText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Tea Me"
-        android:textSize="48dp"
-        />
+        android:text="@string/tea_me"
+        android:textSize="48sp"
+        app:layout_constraintStart_toStartOf="@+id/guidelineLeft"
+        app:layout_constraintTop_toTopOf="@+id/guidelineHeading" />
 
-    <ImageView
-        android:id="@+id/teaImage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/tea"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp" />
 
     <Spinner
         android:id="@+id/teaType"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-
-    <CheckBox
-        android:id="@+id/milkBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Milk" />
-
-    <CheckBox
-        android:id="@+id/sugarBox"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Sugar" />
+        android:layout_marginTop="16dp"
+        android:entries="@array/tea_types"
+        android:spinnerMode="dropdown"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineRight"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guidelineLeft"
+        app:layout_constraintTop_toTopOf="@+id/guidelineTeaType" />
 
     <CheckBox
         android:id="@+id/lemonBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="lemon" />
+        android:text="@string/lemon"
+        app:layout_constraintStart_toStartOf="@+id/guidelineLeft"
+        app:layout_constraintTop_toTopOf="@+id/guidelineOptions" />
+
+    <CheckBox
+        android:id="@+id/milkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/milk"
+        app:layout_constraintStart_toStartOf="@+id/guidelineLeft"
+        app:layout_constraintTop_toBottomOf="@+id/sugarBox" />
+
+    <CheckBox
+        android:id="@+id/sugarBox"
+        android:layout_width="94dp"
+        android:layout_height="29dp"
+        android:text="@string/sugar"
+        app:layout_constraintStart_toStartOf="@+id/guidelineLeft"
+        app:layout_constraintTop_toBottomOf="@+id/lemonBox" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guidelineTeaType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.1796875" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guidelineHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.03" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guidelineLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.055555556" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guidelineRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.95" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guidelineOptions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.2671875" />
 
 
 </android.support.constraint.ConstraintLayout>
