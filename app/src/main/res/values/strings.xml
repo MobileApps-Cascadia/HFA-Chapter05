@@ -2,15 +2,16 @@
     <string name="app_name">Layout Examples</string>
 
     <string-array name="tea_types">
-        <item>hot</item>
-        <item>warm</item>
-        <item>cold</item>
-        <item>iced</item>
+        <item>Hot</item>
+        <item>Warm</item>
+        <item>Cold</item>
+        <item>Iced</item>
     </string-array>
     <string name="lemon">Lemon</string>
     <string name="milk">Milk</string>
     <string name="sugar">Sugar</string>
     <string name="tea_me">Tea Me</string>
     <string name="image_of_tea_pouring_into_cup">Image of tea pouring into cup</string>
+    <string name="order">Order</string>
 
 </resources>
