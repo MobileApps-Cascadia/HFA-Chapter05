@@ -2,10 +2,10 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 31
-    buildToolsVersion "29.0.2"
+    buildToolsVersion "30.0.3"
     defaultConfig {
         applicationId "edu.cascadia.mobile.apps.layoutexamples"
-        minSdkVersion 23
+        minSdkVersion 31
         targetSdkVersion 31
         versionCode 1
         versionName "1.0"

@@ -1,10 +1,4 @@
 <resources>
     <string name="app_name">Layout Examples</string>
 
-    <string-array name="tea_types">
-        <item>hot</item>
-        <item>warm</item>
-        <item>cold</item>
-        <item>iced</item>
-    </string-array>
 </resources>
