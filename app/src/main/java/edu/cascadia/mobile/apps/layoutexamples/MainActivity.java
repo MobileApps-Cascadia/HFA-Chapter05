@@ -40,4 +40,11 @@ public class MainActivity extends AppCompatActivity {
         //Display the string as a temporary popup - called a "Toast"
         Toast.makeText(MainActivity.this, teaTime, Toast.LENGTH_SHORT).show();
     }
+
+    public void onClick(View view) {
+        String teaWith = "Tea with ";
+        teaWith = teaWith + TeaGoodies;
+        Toast.makeText(MainActivity.this, teaWith, Toast.LENGTH_SHORT).show();
+
+    }
 }

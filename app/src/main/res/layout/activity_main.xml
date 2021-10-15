@@ -65,5 +65,15 @@
         app:layout_constraintStart_toStartOf="@id/sugarBox"
         app:layout_constraintTop_toBottomOf="@id/sugarBox" />
 
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/click_me"
+        android:textColor="#432a24"
+        android:onClick="onClick"
+        app:layout_constraintStart_toStartOf="@id/lemonBox"
+        app:layout_constraintTop_toBottomOf="@id/lemonBox"
+/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
