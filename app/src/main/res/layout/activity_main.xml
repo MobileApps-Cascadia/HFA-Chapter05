@@ -30,6 +30,7 @@
         android:layout_height="wrap_content"
         android:text="@string/tea_me"
         android:textSize="48sp"
+        android:textColor="#432a24"
         app:layout_constraintStart_toStartOf="@id/teaImage"
         app:layout_constraintTop_toTopOf="@id/teaImage"
         />
@@ -40,6 +41,7 @@
         android:layout_height="wrap_content"
         android:minHeight="48dp"
         android:text="@string/milk"
+        android:textColor="#432a24"
         app:layout_constraintStart_toStartOf="@id/headingText"
         app:layout_constraintTop_toBottomOf="@id/headingText" />
 
@@ -49,6 +51,7 @@
         android:layout_height="wrap_content"
         android:minHeight="48dp"
         android:text="@string/sugar"
+        android:textColor="#432a24"
         app:layout_constraintStart_toStartOf="@id/milkBox"
         app:layout_constraintTop_toBottomOf="@id/milkBox" />
 
@@ -58,6 +61,7 @@
         android:layout_height="wrap_content"
         android:minHeight="48dp"
         android:text="@string/lemon"
+        android:textColor="#432a24"
         app:layout_constraintStart_toStartOf="@id/sugarBox"
         app:layout_constraintTop_toBottomOf="@id/sugarBox" />
 
