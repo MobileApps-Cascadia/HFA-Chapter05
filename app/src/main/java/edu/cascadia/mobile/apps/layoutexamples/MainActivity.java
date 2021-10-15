@@ -32,12 +32,19 @@ public class MainActivity extends AppCompatActivity {
         else
             TeaGoodies.remove(clicked.getText());
 
-        //Create a String of the current set of labels
         StringBuilder teaTime = new StringBuilder("Tea with ");
         for (CharSequence goodies :TeaGoodies) {
             teaTime.append(goodies).append((", "));
         }
         //Display the string as a temporary popup - called a "Toast"
         Toast.makeText(MainActivity.this, teaTime, Toast.LENGTH_SHORT).show();
+    }
+
+    public void onClick(View view) {
+        //Create a String of the current set of labels
+        String result = "Tea with ";
+        result += String.join(", ", TeaGoodies);
+        //Display the string as a temporary popup - called a "Toast"
+        Toast.makeText(MainActivity.this, result, Toast.LENGTH_SHORT).show();
     }
 }

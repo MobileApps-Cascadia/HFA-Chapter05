@@ -10,6 +10,17 @@
     <!-- TODO : Add constraints to position the check boxes and heading,
                 over the top-left gray area of the image -->
 
+    <ImageView
+        android:id="@+id/teaImage"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/tea"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:id="@+id/headingText"
         android:layout_width="wrap_content"
@@ -19,17 +30,6 @@
         android:text="Tea Me"
         android:textColor="#4E342E"
         android:textSize="48dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:id="@+id/teaImage"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:scaleType="centerCrop"
-        android:src="@drawable/tea"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -84,6 +84,16 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_begin="128dp" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Submit"
+        android:onClick="onClick"
+        app:layout_constraintStart_toStartOf="@+id/lemonBox"
+        app:layout_constraintTop_toBottomOf="@+id/lemonBox" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
