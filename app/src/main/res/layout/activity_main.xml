@@ -1,46 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     tools:context=".MainActivity">
 
     <!-- TODO : Add constraints to position the check boxes and heading,
                 over the top-left gray area of the image -->
-
-    <TextView
-        android:id="@+id/headingText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Tea Me"
-        android:textSize="48dp"
-        />
-
-    <CheckBox
-        android:id="@+id/milkBox"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Milk" />
-
-    <CheckBox
-        android:id="@+id/sugarBox"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Sugar" />
-
-    <CheckBox
-        android:id="@+id/lemonBox"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Lemon" />
 
     <ImageView
         android:id="@+id/teaImage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:scaleType="centerCrop"
-        android:src="@drawable/tea" />
+        android:src="@drawable/tea"
+        tools:ignore="ImageContrastCheck"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:contentDescription="@string/todo" />
+
+    <TextView
+        android:id="@+id/headingText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/tea_me"
+        android:textSize="48sp"
+        app:layout_constraintStart_toStartOf="@+id/teaImage"
+        app:layout_constraintTop_toTopOf="@+id/teaImage" />
 
 
-</LinearLayout>
+    <CheckBox
+        android:id="@+id/milkBox"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="4dp"
+        android:onClick="onCheckboxClicked"
+        android:text="@string/milk"
+        app:layout_constraintStart_toStartOf="@+id/teaImage"
+        app:layout_constraintTop_toBottomOf="@+id/headingText"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <CheckBox
+        android:id="@+id/sugarBox"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="12dp"
+        android:onClick="onCheckboxClicked"
+        android:text="@string/sugar"
+        app:layout_constraintStart_toStartOf="@+id/teaImage"
+        app:layout_constraintTop_toBottomOf="@+id/milkBox"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <CheckBox
+        android:id="@+id/lemonBox"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="12dp"
+        android:onClick="onCheckboxClicked"
+        android:text="@string/lemon"
+        app:layout_constraintStart_toStartOf="@+id/teaImage"
+        app:layout_constraintTop_toBottomOf="@+id/sugarBox"
+        tools:ignore="TouchTargetSizeCheck" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
