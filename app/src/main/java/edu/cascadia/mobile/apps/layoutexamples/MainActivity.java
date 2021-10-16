@@ -21,7 +21,24 @@ public class MainActivity extends AppCompatActivity {
         CheckBox lemonCheck = findViewById(R.id.lemonBox);
 
         //TODO: Assign each checkbox an onClick EventHandler that calls the onCheckboxClicked method
-
+        milkCheck.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onCheckboxClicked(v);
+            }
+        });
+        sugarCheck.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onCheckboxClicked(v);
+            }
+        });
+        lemonCheck.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onCheckboxClicked(v);
+            }
+        });
     }
 
     public void onCheckboxClicked(View view) {
