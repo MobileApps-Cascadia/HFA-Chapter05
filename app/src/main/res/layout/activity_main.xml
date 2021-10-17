@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
@@ -11,36 +12,48 @@
 
     <TextView
         android:id="@+id/headingText"
-        android:layout_width="wrap_content"
+        android:layout_width="207dp"
         android:layout_height="wrap_content"
-        android:text="Tea Me"
-        android:textSize="48dp"
+        android:text="@string/tea_me"
+        android:textSize="48sp"
+        app:layout_constraintEnd_toEndOf="parent"
         />
 
     <CheckBox
         android:id="@+id/milkBox"
-        android:layout_width="wrap_content"
+        android:layout_width="88dp"
         android:layout_height="wrap_content"
-        android:text="Milk" />
+        android:minHeight="48dp"
+        android:text="@string/milk" />
 
     <CheckBox
         android:id="@+id/sugarBox"
-        android:layout_width="wrap_content"
+        android:layout_width="90dp"
         android:layout_height="wrap_content"
-        android:text="Sugar" />
+        android:minHeight="48dp"
+        android:text="@string/sugar" />
 
     <CheckBox
         android:id="@+id/lemonBox"
-        android:layout_width="wrap_content"
+        android:layout_width="91dp"
         android:layout_height="wrap_content"
-        android:text="Lemon" />
+        android:minHeight="48dp"
+        android:text="@string/lemon" />
 
     <ImageView
         android:id="@+id/teaImage"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:contentDescription="@string/tea_me"
         android:scaleType="centerCrop"
-        android:src="@drawable/tea" />
+        android:src="@drawable/tea"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+        tools:ignore="ImageContrastCheck"
+
+        />
 
 
 </LinearLayout>
